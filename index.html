@@ -5,12 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Geburtstag-Einladung · Einladung</title>
 
-<!-- ============================================================
-     TEMI 23 · DIGITALE EINLADUNG
-     Eine einzige HTML-Datei: HTML + CSS + Vanilla JS.
-     Konfiguration (Codes, WhatsApp-Nummer) ganz unten im <script>.
-     ============================================================ -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -571,17 +565,15 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
 const CODE_HASHES = [
   "a8f3e93c2c2aaf750e4246fd172c6a17c35a2cdc367e4f4656e8c2b69640eddb"  // Code 1
 ];
-/* Pro Code EIN Block (gleiche Reihenfolge wie CODE_HASHES!) */
+
 const ENC_NUMBERS = [
   {"salt":"4Qsj/Xs9Xx9mP7UTAiQX0A==","iv":"V6X7Xa5gJ94OSbiv","data":"4dy/g6NGsuLWKTZJC2u7JpI3YhjmV0HfTOgLmg=="}  // Code 1
 ];
-let WHATSAPP_NUMBER = null;               // wird nach dem Login entschlüsselt
+let WHATSAPP_NUMBER = null;              
 const EVENT_DATE = new Date("2026-08-29T19:30:00+02:00");
-const HOLD_MS = 1500;                     // Dauer des Gedrückthaltens
+const HOLD_MS = 1500;                     
 
-/* ============================================================
-   PARTIKEL — sanft aufsteigender Staub + Burst beim Öffnen
-   ============================================================ */
+
 const cv = document.getElementById("particles");
 const cx = cv.getContext("2d");
 let W, H, parts = [];
@@ -706,8 +698,7 @@ async function decryptNumber(code, idx){
   );
   return td.decode(plain);
 }
-/* Nur für dich (Temi): neue Werte in der Browser-Konsole erzeugen.
-   Ergibt Hash für CODE_HASHES und Block für ENC_NUMBERS. */
+
 async function generateSecrets(code, number){
   const norm = code.trim().toUpperCase().replace(/\s+/g,"");
   const salt = crypto.getRandomValues(new Uint8Array(16));
@@ -719,9 +710,7 @@ async function generateSecrets(code, number){
     JSON.stringify({ salt:b64e(salt), iv:b64e(iv), data:b64e(data) }));
 }
 
-/* ============================================================
-   SCREEN 1 · SIEGEL + VALIDIERUNG
-   ============================================================ */
+
 
 const CIRC = 326.7;
 const ring = document.getElementById("ringFill");
