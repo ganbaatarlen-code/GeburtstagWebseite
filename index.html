@@ -125,6 +125,7 @@ body{
   stroke:var(--gold);stroke-linecap:round;
   stroke-dasharray:326.7;stroke-dashoffset:326.7;   /* 2πr, r=52 */
 }
+.ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
 
 .ph-img{
   width:100%;height:100%;object-fit:cover;display:block;
@@ -422,10 +423,10 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
         <p class="eyebrow">Eindrücke</p>
         <h3>Die Location</h3>
         <div class="ph-grid">
-          <div class="ph-img" src="bilder/Grid_Bild1_1000px-650x650.png"></div>
-          <div class="ph-img" src="bilder/Grid_Bild5_1000px-650x650.png"></div>
-          <div class="ph-img" src="bilder/Grid_Bild4_800px.png"></div>
-          <div class="ph-img" src="bilder/Grid_Bild3_600px-650x650.png"></div>
+          <img class="ph-img" src="bilder/Grid_Bild1_1000px-650x650.png" alt="Bild 1">
+          <img class="ph-img" src="bilder/Grid_Bild5_1000px-650x650.png" alt="Bild 5">
+          <img class="ph-img" src="bilder/Grid_Bild4_800px.png" alt="Bild 4">
+          <img class="ph-img" src="bilder/Grid_Bild3_600px-650x650.png" alt="Bild 3">
         </div>
       </div>
     </div>
@@ -536,7 +537,8 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
            target="_blank" rel="noopener">Route öffnen ↗</a>
       </div>
       <div class="card span2 rv">
-        <div class="ph-img" style="aspect-ratio:16/10;height:100%" src="bilder/location.png"></div>
+        <img class="ph-img" style="aspect-ratio:16/10;height:100%;width:100%" src="bilder/location.png" alt="Loci Bar außen">
+
       </div>
     </div>
   </section>
