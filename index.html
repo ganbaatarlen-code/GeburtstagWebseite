@@ -125,6 +125,15 @@ body{
   stroke:var(--gold);stroke-linecap:round;
   stroke-dasharray:326.7;stroke-dashoffset:326.7;   /* 2πr, r=52 */
 }
+
+.ph-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  border-radius:1.1rem;aspect-ratio:4/3;
+  transition:transform .6s var(--ease),filter .6s var(--ease);
+}
+.ph-grid .ph-img{aspect-ratio:1/1}
+.card:hover .ph-img{transform:scale(1.03);filter:brightness(1.08)}
+
 .ring-fill.error{stroke:#C96A5B}
 .seal{
   position:absolute;inset:14px;border-radius:50%;
@@ -414,10 +423,10 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
         <p class="eyebrow">Eindrücke</p>
         <h3>Die Location</h3>
         <div class="ph-grid">
-          <div class="ph" src="bilder/Grid_Bild1_1000px-650x650.png"></div>
-          <div class="ph" src="bilder/Grid_Bild5_1000px-650x650.png"></div>
-          <div class="ph" src="bilder/Grid_Bild4_800px.png"></div>
-          <div class="ph" src="bilder/Grid_Bild3_600px-650x650.png"></div>
+          <div class="ph-img" src="bilder/Grid_Bild1_1000px-650x650.png"></div>
+          <div class="ph-img" src="bilder/Grid_Bild5_1000px-650x650.png"></div>
+          <div class="ph-img" src="bilder/Grid_Bild4_800px.png"></div>
+          <div class="ph-img" src="bilder/Grid_Bild3_600px-650x650.png"></div>
         </div>
       </div>
     </div>
@@ -528,7 +537,7 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
            target="_blank" rel="noopener">Route öffnen ↗</a>
       </div>
       <div class="card span2 rv">
-        <div class="ph" style="aspect-ratio:16/10;height:100%" src="bilder/location.png"></div>
+        <div class="ph-img" style="aspect-ratio:16/10;height:100%" src="bilder/location.png"></div>
       </div>
     </div>
   </section>
