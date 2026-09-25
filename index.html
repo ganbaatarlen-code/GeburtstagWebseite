@@ -388,7 +388,7 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
       <span class="reveal-line" style="display:block"><span>Willkommen, <em id="heroName">Gast</em>.</span></span>
       <span class="reveal-line" style="display:block"><span>Temi feiert seinen 23.</span></span>
     </h1>
-    <p class="date">29. August 2026 · 19:30 · Loci Bar, Wien</p>
+    <p class="date">03. Oktober 2026 · 19:30 · Loci Bar, Wien</p>
     <div class="count" id="count">
       <div><b id="cd">–</b><small>Tage</small></div>
       <div><b id="ch">–</b><small>Std</small></div>
@@ -408,7 +408,7 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
       <div class="card span2 rv">
         <p class="eyebrow">Persönlich</p>
         <h3>Liebe Gäste,</h3>
-        <p>am <strong>Samstag, den 29. August 2026</strong>, öffnet die Loci Bar ihre Türen nur für uns.
+        <p>am <strong>Samstag, den 03. Oktober 2026</strong>, öffnet die Loci Bar ihre Türen nur für uns.
         Ich freue mich riesig, meinen <strong>23. Geburtstag</strong> mit euch zu feiern – mit guter Musik,
         Spielen, Torte und allem, was dazugehört. Kommt, wie ihr seid, und bringt gute Laune mit.</p>
         <p style="margin-top:1rem">Bis bald, <strong>Temi</strong></p>
@@ -557,7 +557,7 @@ footer .serif{color:var(--gold);font-size:1.3rem;letter-spacing:.04em;text-trans
 
   <footer>
     <span class="serif">Temi · 23</span>
-    29 · 08 · 2026 — Loci Bar, Wien
+    03 · 10 · 2026 — Loci Bar, Wien
   </footer>
 </div>
 
@@ -570,7 +570,7 @@ const ENC_NUMBERS = [
   {"salt":"4Qsj/Xs9Xx9mP7UTAiQX0A==","iv":"V6X7Xa5gJ94OSbiv","data":"4dy/g6NGsuLWKTZJC2u7JpI3YhjmV0HfTOgLmg=="}  // Code 1
 ];
 let WHATSAPP_NUMBER = null;              
-const EVENT_DATE = new Date("2026-08-29T19:30:00+02:00");
+const EVENT_DATE = new Date("2026-10-03T19:30:00+02:00");
 const HOLD_MS = 1500;                     
 
 
@@ -818,7 +818,7 @@ holdable(
     rsvpFill.style.transform = "scaleX(1)";
     confettiBurst();                                   // 🎉 Belohnung
     const name = document.getElementById("heroName").textContent;
-    const text = encodeURIComponent(`Hey Temi! Ich bin am 29.8. bei deinem 23er dabei! 🎉 – ${name}`);
+    const text = encodeURIComponent(`Hey Temi! Ich bin am 03.10. bei deinem 23er dabei! 🎉 – ${name}`);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
     setTimeout(()=> rsvpFill.style.transform = "scaleX(0)", 800);
   },
@@ -831,7 +831,7 @@ holdable(
 
 /* ============================================================
    ZUM KALENDER HINZUFÜGEN (.ics-Download)
-   29.08.2026 19:30 MESZ = 17:30 UTC · Ende offen, hier 02:00
+   03.10.2026 19:30 MESZ = 17:30 UTC · Ende offen, hier 02:00
    ============================================================ */
 document.getElementById("icsBtn").addEventListener("click", e => {
   e.preventDefault();
@@ -840,8 +840,8 @@ document.getElementById("icsBtn").addEventListener("click", e => {
     "BEGIN:VEVENT",
     "UID:temi23-" + Date.now() + "@einladung",
     "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g,"").split(".")[0] + "Z",
-    "DTSTART:20260829T173000Z",
-    "DTEND:20260830T000000Z",
+    "DTSTART:20261003T173000Z",
+    "DTEND:20261004T000000Z",
     "SUMMARY:Temis 23. Geburtstag 🎉",
     "LOCATION:Loci Bar\\, Gymnasiumstraße 16\\, 1180 Wien",
     "DESCRIPTION:Ankommen 19:30–20:30 · Die Jagdkette · Anschnitt der Torte · DJ\\, Bier-Pong\\, Tischfußball",
